@@ -145,7 +145,7 @@ namespace blueutils
                 if (playerSkillLvl >= skillLvlForSpell - 31)
                 {
                     auto chanceToLearn = 33 + PBlueMage->getMod(Mod::BLUE_LEARN_CHANCE);
-                    if (tpzrand::GetRandomNumber(100) < chanceToLearn)
+                    if (tpzrand::GetRandomNumber(50) < chanceToLearn)
                     {
                         if (charutils::addSpell(PBlueMage, static_cast<uint16>(PSpell->getID())))
                         {

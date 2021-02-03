@@ -29,6 +29,49 @@ end
 function onMobSpawn(mob)
     tpz.trust.message(mob, message_page_offset, tpz.trust.message_offset.SPAWN)
 
+    mob:addSimpleGambit(ai.t.PARTY, ai.c.HPP_LT, 50, ai.r.MA, ai.s.RANDOM, tpz.magic.spellFamily.CURE)
+
+    mob:addFullGambit({
+        ['predicates'] =
+        {
+            {
+                ['target'] = ai.t.PARTY, ['condition'] = ai.c.HPP_LT, ['argument'] = 20,
+            },
+            {
+                ['target'] = ai.t.PARTY, ['condition'] = ai.c.NOT_STATUS, ['argument'] = tpz.effect.PAEON,
+            },
+
+        },
+        ['actions'] =
+        {
+            {
+                ['reaction'] = ai.r.MA, ['select'] = ai.s.HIGHEST, ['argument'] = tpz.magic.spellFamily.ARMYS_PAEON,
+            },
+        },
+    })
+
+    mob:addFullGambit({
+        ['predicates'] =
+        {
+            {
+                ['target'] = ai.t.PARTY, ['condition'] = ai.c.MPP_LT, ['argument'] = 20,
+            },
+            {
+                ['target'] = ai.t.PARTY, ['condition'] = ai.c.NOT_STATUS, ['argument'] = tpz.effect.BALLAD,
+            },
+
+        },
+        ['actions'] =
+        {
+            {
+                ['reaction'] = ai.r.MA, ['select'] = ai.s.HIGHEST, ['argument'] = tpz.magic.spellFamily.MAGES_BALLAD,
+            },
+        },
+    })
+
+    mob:addSimpleGambit(ai.t.SELF, ai.c.NOT_STATUS, tpz.effect.PAEON, ai.r.MA, ai.s.HIGHEST, tpz.magic.spellFamily.MADRIGAL)
+    mob:addSimpleGambit(ai.t.SELF, ai.c.NOT_STATUS, tpz.effect.BALLAD, ai.r.MA, ai.s.HIGHEST, tpz.magic.spellFamily.MARCH)
+
     mob:addSimpleGambit(ai.t.PARTY, ai.c.STATUS, tpz.effect.POISON, ai.r.MA, ai.s.SPECIFIC, tpz.magic.spell.POISONA)
     mob:addSimpleGambit(ai.t.PARTY, ai.c.STATUS, tpz.effect.PARALYSIS, ai.r.MA, ai.s.SPECIFIC, tpz.magic.spell.PARALYNA)
     mob:addSimpleGambit(ai.t.PARTY, ai.c.STATUS, tpz.effect.BLINDNESS, ai.r.MA, ai.s.SPECIFIC, tpz.magic.spell.BLINDNA)
@@ -36,12 +79,6 @@ function onMobSpawn(mob)
     mob:addSimpleGambit(ai.t.PARTY, ai.c.STATUS, tpz.effect.PETRIFICATION, ai.r.MA, ai.s.SPECIFIC, tpz.magic.spell.STONA)
     mob:addSimpleGambit(ai.t.PARTY, ai.c.STATUS, tpz.effect.DISEASE, ai.r.MA, ai.s.SPECIFIC, tpz.magic.spell.VIRUNA)
     mob:addSimpleGambit(ai.t.PARTY, ai.c.STATUS, tpz.effect.CURSE_I, ai.r.MA, ai.s.SPECIFIC, tpz.magic.spell.CURSNA)
-
-    -- TODO: Better logic than this
-    mob:addSimpleGambit(ai.t.SELF, ai.c.NOT_STATUS, tpz.effect.MARCH, ai.r.MA, ai.s.HIGHEST, tpz.magic.spellFamily.MARCH)
-    mob:addSimpleGambit(ai.t.SELF, ai.c.NOT_STATUS, tpz.effect.BALLAD, ai.r.MA, ai.s.HIGHEST, tpz.magic.spellFamily.MAGES_BALLAD)
-
-    mob:addSimpleGambit(ai.t.PARTY, ai.c.HPP_LT, 75, ai.r.MA, ai.s.HIGHEST, tpz.magic.spellFamily.CURE)
 
     -- Try and ranged attack every 60s
     mob:addSimpleGambit(ai.t.TARGET, ai.c.ALWAYS, 0, ai.r.RATTACK, 0, 0, 60)
