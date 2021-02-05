@@ -30,12 +30,12 @@ local startingNationInfo =
 
 local startingJobGear =
 {
-    [tpz.job.WAR] = {16534},       -- onion sword
-    [tpz.job.MNK] = {13184},       -- white belt
-    [tpz.job.WHM] = {17068, 4608}, -- onion rod, scroll of cure
-    [tpz.job.BLM] = {17104, 4607}, -- onion staff, scroll of stone
-    [tpz.job.RDM] = {16482, 4606}, -- onion dagger, scroll of dia
-    [tpz.job.THF] = {16483},       -- onion knife
+    [tpz.job.WAR] = {16534, 27556, 10293, 11811},       -- onion sword
+    [tpz.job.MNK] = {13184, 27556, 10293, 11811},       -- white belt
+    [tpz.job.WHM] = {17068, 4608, 27556, 10293, 11811}, -- onion rod, scroll of cure
+    [tpz.job.BLM] = {17104, 4607, 27556, 10293, 11811}, -- onion staff, scroll of stone
+    [tpz.job.RDM] = {16482, 4606, 27556, 10293, 11811}, -- onion dagger, scroll of dia
+    [tpz.job.THF] = {16483, 27556, 10293, 11811},       -- onion knife
 }
 
 -----------------------------------

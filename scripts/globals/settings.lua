@@ -68,12 +68,12 @@ ALL_MAPS = 0 -- Set to 1 to give starting characters all the maps.
 UNLOCK_OUTPOST_WARPS = 0 -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
 
 SHOP_PRICE      = 1.000 -- Multiplies prices in NPC shops.
-GIL_RATE        = 1.000 -- Multiplies gil earned from quests.  Won't always display in game.
+GIL_RATE        = 5.000 -- Multiplies gil earned from quests.  Won't always display in game.
 BAYLD_RATE      = 1.000 -- Multiples bayld earned from quests.
 EXP_RATE        = 1.000 -- Multiplies exp earned from fov and quests.
 TABS_RATE       = 1.000 -- Multiplies tabs earned from fov.
 ROE_EXP_RATE    = 1.000 -- Multiplies exp earned from records of eminence.
-SPARKS_RATE     = 1.000 -- Multiplies sparks earned from records of eminence.
+SPARKS_RATE     = 10.000 -- Multiplies sparks earned from records of eminence.
 CURE_POWER      = 1.000 -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
 ELEMENTAL_POWER = 1.000 -- Multiplies damage dealt by Elemental and non-drain Dark Magic.
 DIVINE_POWER    = 1.000 -- Multiplies damage dealt by Divine Magic.
@@ -82,24 +82,24 @@ BLUE_POWER      = 1.000 -- Multiplies damage dealt by Blue Magic.
 DARK_POWER      = 1.000 -- Multiplies amount drained by Dark Magic.
 ITEM_POWER      = 1.000 -- Multiplies the effect of items such as Potions and Ethers.
 WEAPON_SKILL_POWER  = 1.000 -- Multiplies damage dealt by Weapon Skills.
-WEAPON_SKILL_POINTS = 1.000 -- Multiplies points earned during weapon unlocking.
+WEAPON_SKILL_POINTS = 3.000 -- Multiplies points earned during weapon unlocking.
 USE_ADOULIN_WEAPON_SKILL_CHANGES = true -- true/false. Change to toggle new Adoulin weapon skill damage calculations
 
 -- TRUSTS
-ENABLE_TRUST_CASTING = 0
-ENABLE_TRUST_QUESTS  = 0
+ENABLE_TRUST_CASTING = 1
+ENABLE_TRUST_QUESTS  = 1
 
-HARVESTING_BREAK_CHANCE = 33 -- % chance for the sickle to break during harvesting.  Set between 0 and 100.
-EXCAVATION_BREAK_CHANCE = 33 -- % chance for the pickaxe to break during excavation.  Set between 0 and 100.
-LOGGING_BREAK_CHANCE    = 33 -- % chance for the hatchet to break during logging.  Set between 0 and 100.
-MINING_BREAK_CHANCE     = 33 -- % chance for the pickaxe to break during mining.  Set between 0 and 100.
-HARVESTING_RATE         = 50 -- % chance to recieve an item from haresting.  Set between 0 and 100.
-EXCAVATION_RATE         = 50 -- % chance to recieve an item from excavation.  Set between 0 and 100.
-LOGGING_RATE            = 50 -- % chance to recieve an item from logging.  Set between 0 and 100.
-MINING_RATE             = 50 -- % chance to recieve an item from mining.  Set between 0 and 100.
+HARVESTING_BREAK_CHANCE = 20 -- % chance for the sickle to break during harvesting.  Set between 0 and 100.
+EXCAVATION_BREAK_CHANCE = 20 -- % chance for the pickaxe to break during excavation.  Set between 0 and 100.
+LOGGING_BREAK_CHANCE    = 20 -- % chance for the hatchet to break during logging.  Set between 0 and 100.
+MINING_BREAK_CHANCE     = 20 -- % chance for the pickaxe to break during mining.  Set between 0 and 100.
+HARVESTING_RATE         = 80 -- % chance to recieve an item from haresting.  Set between 0 and 100.
+EXCAVATION_RATE         = 80 -- % chance to recieve an item from excavation.  Set between 0 and 100.
+LOGGING_RATE            = 80 -- % chance to recieve an item from logging.  Set between 0 and 100.
+MINING_RATE             = 80 -- % chance to recieve an item from mining.  Set between 0 and 100.
 DIGGING_RATE            = 85 -- % chance to receive an item from chocbo digging during favorable weather.  Set between 0 and 100.
 
-HEALING_TP_CHANGE       = -100 -- Change in TP for each healing tick. Default is -100
+HEALING_TP_CHANGE       = -50 -- Change in TP for each healing tick. Default is -100
 
 -- SE implemented coffer/chest illusion time in order to prevent coffer farming. No-one in the same area can open a chest or coffer for loot (gil, gems & items)
 -- till a random time between MIN_ILLSION_TIME and MAX_ILLUSION_TIME. During this time players can loot keyitem and item related to quests (AF, maps... etc.)
@@ -114,12 +114,12 @@ LandKingSystem_NQ = 1
 LandKingSystem_HQ = 1
 
 -- Multiplier to NM lottery spawn chance. (Default 1.0) eg. 0 = disable lottery spawns. -1 for always 100% chance.
-NM_LOTTERY_CHANCE = 1.0
+NM_LOTTERY_CHANCE = -0.5
 -- Multiplier to NM lottery cooldown time (Default 1.0) eg. 2.0 = twice as long. 0 = no cooldowns.
-NM_LOTTERY_COOLDOWN = 1.0
+NM_LOTTERY_COOLDOWN = 0.1
 
 -- DYNAMIS SETTINGS
-BETWEEN_2DYNA_WAIT_TIME  = 24       -- Hours before player can re-enter Dynamis. Default is 1 Earthday (24 hours).
+BETWEEN_2DYNA_WAIT_TIME  = 1       -- Hours before player can re-enter Dynamis. Default is 1 Earthday (24 hours).
 DYNA_MIDNIGHT_RESET      = true     -- If true, makes the wait time count by number of server midnights instead of full 24 hour intervals
 DYNA_LEVEL_MIN           = 65       -- Level min for entering in Dynamis
 TIMELESS_HOURGLASS_COST  = 500000   -- Refund for the timeless hourglass for Dynamis.
@@ -141,7 +141,7 @@ FRIGICITE_TIME  = 30    -- When OLDSCHOOL_G2 is enabled, this is the time (in se
 DIA_OVERWRITE = 1 -- Set to 1 to allow Bio to overwrite same tier Dia.  Default is 1.
 BIO_OVERWRITE = 0 -- Set to 1 to allow Dia to overwrite same tier Bio.  Default is 0.
 STONESKIN_CAP = 350 -- Soft cap for hp absorbed by stoneskin
-BLINK_SHADOWS = 2   -- Number of shadows supplied by Blink spell
+BLINK_SHADOWS = 3   -- Number of shadows supplied by Blink spell
 SPIKE_EFFECT_DURATION = 180 -- the duration of RDM, BLM spikes effects (not Reprisal)
 ELEMENTAL_DEBUFF_DURATION = 120 -- base duration of elemental debuffs
 AQUAVEIL_COUNTER = 1  -- Base amount of hits Aquaveil absorbs to prevent spell interrupts. Retail is 1.
@@ -157,7 +157,7 @@ HALLOWEEN_2005 = 0 -- Set to 1 to Enable the 2005 version of Harvest Festival, w
 HALLOWEEN_YEAR_ROUND = 0 -- Set to 1 to have Harvest Festival initialize outside of normal times.
 
 -- MISC
-HOMEPOINT_HEAL = 0 --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
+HOMEPOINT_HEAL = 1 --Set to 1 if you want Home Points to heal you like in single-player Final Fantasy games.
 RIVERNE_PORTERS = 120 -- Time in seconds that Unstable Displacements in Cape Riverne stay open after trading a scale.
 LANTERNS_STAY_LIT = 1200 -- time in seconds that lanterns in the Den of Rancor stay lit.
 ENABLE_COP_ZONE_CAP = 0 -- enable or disable lvl cap
@@ -165,10 +165,10 @@ ALLOW_MULTIPLE_EXP_RINGS = 0 -- Set to 1 to remove ownership restrictions on the
 BYPASS_EXP_RING_ONE_PER_WEEK = 0 -- -- Set to 1 to bypass the limit of one ring per Conquest Tally Week.
 NUMBER_OF_DM_EARRINGS = 1 -- Number of earrings players can simultaneously own from Divine Might before scripts start blocking them (Default: 1)
 HOMEPOINT_TELEPORT = 1 -- Enables the homepoint teleport system
-DIG_ABUNDANCE_BONUS = 0 -- Increase chance of digging up an item (450  = item digup chance +45)
-DIG_FATIGUE = 1 -- Set to 0 to disable Dig Fatigue
-DIG_GRANT_BURROW = 0 -- Set to 1 to grant burrow ability
-DIG_GRANT_BORE = 0 -- Set to 1 to grant bore ability
-ENM_COOLDOWN = 120  -- Number of hours before a player can obtain same KI for ENMs (default: 5 days)
-FORCE_SPAWN_QM_RESET_TIME = 300 -- Number of seconds the ??? remains hidden for after the despawning of the mob it force spawns.
-GOBBIE_BOX_MIN_AGE  = 45 -- Minimum character age in days before a character can sign up for Gobbie Mystery Box
+DIG_ABUNDANCE_BONUS = 450 -- Increase chance of digging up an item (450  = item digup chance +45)
+DIG_FATIGUE = 0 -- Set to 0 to disable Dig Fatigue
+DIG_GRANT_BURROW = 1 -- Set to 1 to grant burrow ability
+DIG_GRANT_BORE = 1 -- Set to 1 to grant bore ability
+ENM_COOLDOWN = 1  -- Number of hours before a player can obtain same KI for ENMs (default: 5 days)
+FORCE_SPAWN_QM_RESET_TIME = 60 -- Number of seconds the ??? remains hidden for after the despawning of the mob it force spawns.
+GOBBIE_BOX_MIN_AGE  = 1 -- Minimum character age in days before a character can sign up for Gobbie Mystery Box
